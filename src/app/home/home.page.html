@@ -1,0 +1,26 @@
+<!--connexion page-->
+<ion-content>
+  <div class="container">
+    <img src="assets/icon/logo.png" alt="Petit prince logo" class="logo">
+    <form>
+      <ion-item>
+        <ion-label position="floating">Identifiant</ion-label>
+        <ion-input type="text" [(ngModel)]="username" name ="username"></ion-input>
+      </ion-item>
+      <br>
+      <ion-item>
+        <ion-label position="floating">Mot de passe</ion-label>
+        <ion-input type="password" [(ngModel)]="password" name="password"></ion-input>
+      </ion-item>
+      <br>
+      <div class="remember-me">
+        <ion-checkbox slot="start" [(ngModel)]="rememberMe" name ="rememberMe" value="true"></ion-checkbox>
+        <p>Se souvenir de moi</p>
+      </div>
+      <br>
+      <ion-button expand="block" (click)="login()">Se connecter</ion-button>
+    </form>
+    <div class="separator">
+    </div>
+  </div>
+</ion-content>

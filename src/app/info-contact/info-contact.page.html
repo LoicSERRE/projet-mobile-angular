@@ -1,0 +1,73 @@
+<!--Menu for the articles page (Articles, Galerie d'images, Dates importantes, Informations de contact, Favoris, Déconnexion)-->
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title (click)="gomenu()">Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-list>
+      <ion-item>
+        <ion-icon icon = "newspaper"></ion-icon>
+        <ion-label (click)="goarticle()">Articles</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon icon = "images"></ion-icon>
+        <ion-label (click)="gogalerie()">Galerie d'images</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon icon = "calendar"></ion-icon>
+        <ion-label (click)="godate()">Dates importantes</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon icon = "call"></ion-icon>
+        <ion-label>Informations de contact</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon icon = "star"></ion-icon>
+        <ion-label (click) = "gofavoris()">Favoris</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon icon = "log-out"></ion-icon>
+        <ion-label (click) = "disconnect()">Déconnexion</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<!--Title of the contact information page-->
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Informations de contact
+    </ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button menuId="menuPrincipal"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<!--Contact information (map, phone number, email)-->
+<ion-content [fullscreen]="true" id="main-content">
+  <ion-card>
+    <ion-button (click) = "openMap()">
+      <ion-icon icon = "map"></ion-icon>
+        École le Petit Prince
+    </ion-button>
+    <ion-button (click) = "callNumber()">
+      <ion-icon icon = "call"></ion-icon>
+      04 12 34 56 78
+    </ion-button>
+    <ion-button (click) = "sendMail()">
+      <ion-icon icon = "mail"></ion-icon>
+      contact@lepetitprince.fr
+    </ion-button>
+  </ion-card>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>©2023 - Loïc SERRE</ion-title>
+  </ion-toolbar>
+</ion-footer>

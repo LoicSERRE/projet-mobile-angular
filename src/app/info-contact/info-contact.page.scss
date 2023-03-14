@@ -1,0 +1,15 @@
+/*Mettre les boutons les un en dessous des autres*/
+ion-button{
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    border: 1px solid #000;
+}
+
+ion-footer{
+	text-align: center;
+}
+
+ion-icon{
+    margin-right: 10px;
+}

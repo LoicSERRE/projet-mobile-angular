@@ -1,0 +1,77 @@
+<!--Menu for the articles page (Articles, Galerie d'images, Dates importantes, Informations de contact, Favoris, Déconnexion)-->
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title (click)="gomenu()">Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-list>
+      <ion-item>
+        <ion-icon icon = "newspaper"></ion-icon>
+        <ion-label (click)="goarticle()">Articles</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon icon = "images"></ion-icon>
+        <ion-label (click)="gogalerie()">Galerie d'images</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon icon = "calendar"></ion-icon>
+        <ion-label>Dates importantes</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon icon = "call"></ion-icon>
+        <ion-label (click) = "goinfo()">Informations de contact</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon icon = "star"></ion-icon>
+        <ion-label>Favoris</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon icon = "log-out"></ion-icon>
+        <ion-label (click) = "disconnect()">Déconnexion</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<!--Title of the favorites page-->
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Favoris
+    </ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button menuId="menuPrincipal"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" id="main-content">
+  <!--Refresh the list of favorites-->
+  <ion-refresher slot="fixed" (ionRefresh)="rafraichirListe($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <!--Display the list of favorites-->
+  <ion-list *ngIf="listefavoris">
+    <ion-card *ngFor="let favoris of listefavoris">
+      <ion-card-header>
+        <ion-card-title>{{ favoris.titre }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p style = "font-weight: bold">Catégorie : {{ favoris.categorie }}</p>
+        <p *ngIf="favoris.important == true" style="color: red">Important</p>
+        <p *ngIf="favoris.important == false" style="color: green">Non important</p><br>
+        <p>{{ favoris.texte }}</p><br>
+        <p>Publié le {{ favoris.date | date:'dd/MM/yyyy' }} à {{ favoris.date | date:'HH:mm' }}</p>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>©2023 - Loïc SERRE</ion-title>
+  </ion-toolbar>
+</ion-footer>

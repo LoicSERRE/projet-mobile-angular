@@ -1,0 +1,59 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+/*Agrandir la taille des inputs*/
+ion-input {
+  width: 35vh;
+  height: 35vh;
+  margin: 10px auto;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+.remember-me p {
+  margin-left: 10px;
+}
+
+.logo {
+  margin-bottom: 32px;
+}
+
+.separator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 24px 0;
+}
+
+.separator span {
+  color: #8e8e8e;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #fff;
+  padding: 0 16px;
+}
+
+.forgot-password {
+  margin-top: 24px;
+  text-align: center;
+  font-size: 14px;
+  color: #8e8e8e;
+}
+
+.forgot-password:hover {
+  color: #000;
+}
+
+.logo {
+  width: 150px;
+  height: 150px;
+}
