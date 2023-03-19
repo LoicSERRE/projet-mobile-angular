@@ -72,7 +72,7 @@ export class HomePage {
         localStorage.setItem('id', this.username);
         localStorage.setItem('mdp', this.password);
         // if the user is correct, go to the logged page
-        this.navCtrl.navigateForward('/logged');
+        this.navCtrl.navigateRoot('/logged');
       } 
       else {
         // if the user is incorrect, show a toast with the error
