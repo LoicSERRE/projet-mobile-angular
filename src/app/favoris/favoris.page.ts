@@ -17,27 +17,27 @@ export class FavorisPage implements OnInit {
 
   // function for navigate to other page
   gomenu() {
-    this.navCtrl.navigateForward('/logged');
+    this.navCtrl.navigateRoot('/logged');
   }
   
   gogalerie() {
-    this.navCtrl.navigateForward('/galerie-image');
+    this.navCtrl.navigateRoot('/galerie-image');
   }
 
   goinfo(){
-    this.navCtrl.navigateForward('/info-contact');
+    this.navCtrl.navigateRoot('/info-contact');
   }
 
   goarticle(){
-    this.navCtrl.navigateForward('/articles');
+    this.navCtrl.navigateRoot('/articles');
   }
 
   godate(){
-    this.navCtrl.navigateForward('/date-importante');
+    this.navCtrl.navigateRoot('/date-importante');
   }
 
   disconnect(){
-    this.navCtrl.navigateForward('/home');
+    this.navCtrl.navigateRoot('/home');
   }
 
   rafraichirListe(event : any){
