@@ -27,27 +27,27 @@ export class GalerieImagePage implements OnInit {
   }
 
   gomenu() {
-    this.navCtrl.navigateForward('/logged');
+    this.navCtrl.navigateRoot('/logged');
   }
 
   godate(){
-    this.navCtrl.navigateForward('/date-importante');
+    this.navCtrl.navigateRoot('/date-importante');
   }
 
   goinfo(){
-    this.navCtrl.navigateForward('/info-contact');
+    this.navCtrl.navigateRoot('/info-contact');
   }
 
   goarticle(){
-    this.navCtrl.navigateForward('/articles');
+    this.navCtrl.navigateRoot('/articles');
   }
 
   gofavoris(){
-    this.navCtrl.navigateForward('/favoris');
+    this.navCtrl.navigateRoot('/favoris');
   }
 
   disconnect(){
-    this.navCtrl.navigateForward('/home');
+    this.navCtrl.navigateRoot('/home');
   }
 
   rafraichirListe(event : any){
