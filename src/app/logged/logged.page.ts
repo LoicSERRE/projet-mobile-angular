@@ -10,27 +10,27 @@ export class LoggedPage implements OnInit {
 
   // function for navigate to other page
   goarticles() {
-    this.navCtrl.navigateForward('/articles');
+    this.navCtrl.navigateRoot('/articles');
   }
 
   gofavoris() {
-    this.navCtrl.navigateForward('/favoris');
+    this.navCtrl.navigateRoot('/favoris');
   }
 
   goinfo() {
-    this.navCtrl.navigateForward('/info-contact');
+    this.navCtrl.navigateRoot('/info-contact');
   }
 
   godate() {
-    this.navCtrl.navigateForward('/date-importante');
+    this.navCtrl.navigateRoot('/date-importante');
   }
 
   gogalerie() {
-    this.navCtrl.navigateForward('/galerie-image');
+    this.navCtrl.navigateRoot('/galerie-image');
   }
 
   disconnect() {
-    this.navCtrl.navigateForward('/home');
+    this.navCtrl.navigateRoot('/home');
   }
 
   constructor(private navCtrl: NavController) { }
