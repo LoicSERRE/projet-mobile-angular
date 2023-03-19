@@ -32,27 +32,27 @@ export class ArticlesPage implements OnInit {
 
   // function for navigate to other page
   gomenu() {
-    this.navCtrl.navigateForward('/logged');
+    this.navCtrl.navigateRoot('/logged');
   }
 
   gogalerie() {
-    this.navCtrl.navigateForward('/galerie-image');
+    this.navCtrl.navigateRoot('/galerie-image');
   }
 
   godate(){
-    this.navCtrl.navigateForward('/date-importante');
+    this.navCtrl.navigateRoot('/date-importante');
   }
 
   goinfo(){
-    this.navCtrl.navigateForward('/info-contact');
+    this.navCtrl.navigateRoot('/info-contact');
   }
 
   gofavoris(){
-    this.navCtrl.navigateForward('/favoris');
+    this.navCtrl.navigateRoot('/favoris');
   }
 
   disconnect(){
-    this.navCtrl.navigateForward('/home');
+    this.navCtrl.navigateRoot('/home');
   }
 
   // function for add or remove article to favorite list
