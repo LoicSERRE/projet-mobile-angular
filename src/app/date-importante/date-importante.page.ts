@@ -27,27 +27,27 @@ export class DateImportantePage implements OnInit {
 
   // function for navigate to other page
   gomenu(){
-    this.navCtrl.navigateForward('/logged');
+    this.navCtrl.navigateRoot('/logged');
   }
   
   gogalerie() {
-    this.navCtrl.navigateForward('/galerie-image');
+    this.navCtrl.navigateRoot('/galerie-image');
   }
 
   goinfo(){
-    this.navCtrl.navigateForward('/info-contact');
+    this.navCtrl.navigateRoot('/info-contact');
   }
 
   goarticle(){
-    this.navCtrl.navigateForward('/articles');
+    this.navCtrl.navigateRoot('/articles');
   }
 
   gofavoris(){
-    this.navCtrl.navigateForward('/favoris');
+    this.navCtrl.navigateRoot('/favoris');
   }
 
   disconnect(){
-    this.navCtrl.navigateForward('/home');
+    this.navCtrl.navigateRoot('/home');
   }
 
   // function for refresh the list
