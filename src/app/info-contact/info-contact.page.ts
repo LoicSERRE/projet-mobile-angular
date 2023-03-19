@@ -12,27 +12,27 @@ export class InfoContactPage implements OnInit {
 
   // function for navigate to other page
   gomenu() {
-    this.navCtrl.navigateForward('/logged');
+    this.navCtrl.navigateRoot('/logged');
   }
   
   gogalerie() {
-    this.navCtrl.navigateForward('/galerie-image');
+    this.navCtrl.navigateRoot('/galerie-image');
   }
 
   godate(){
-    this.navCtrl.navigateForward('/date-importante');
+    this.navCtrl.navigateRoot('/date-importante');
   }
 
   goarticle(){
-    this.navCtrl.navigateForward('/articles');
+    this.navCtrl.navigateRoot('/articles');
   }
 
   gofavoris(){
-    this.navCtrl.navigateForward('/favoris');
+    this.navCtrl.navigateRoot('/favoris');
   }
 
   disconnect(){
-    this.navCtrl.navigateForward('/home');
+    this.navCtrl.navigateRoot('/home');
   }
 
   // open google maps with the address of the school
